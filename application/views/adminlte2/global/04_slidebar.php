@@ -27,24 +27,11 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-dashboard text-white"></i> <span>Dashboard</span></a></li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-user text-green"></i> <span>Profile</span></a></li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-envelope text-yellow"></i> <span>Verivikasi Daftar Ulang</span></a></li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book text-red"></i> <span>Masukan Nilai Ujian</span></a></li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-mortar-board text-blue"></i> <span>Data Siswa</span></a></li>
-        <li class="active treeview menu-open">
-          <a href="#">
-            <i class="fa fa-database text-yellow"></i> <span>Master Data</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Level User</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> User</a></li>
-          </ul>
-        </li>
-       
+        <li><a href="<?php print base_url('index.php/superadmin/dashboard');?>"><i class="fa fa-dashboard text-white"></i> <span>Dashboard</span></a></li>
+        <li><a href="<?php print base_url('index.php/superadmin/profile');?>"><i class="fa fa-user text-green"></i> <span>Profile</span></a></li>
+        <li><a href="<?php print base_url('index.php/superadmin/');?>"><i class="fa fa-envelope text-yellow"></i> <span>Verivikasi Daftar Ulang</span></a></li>
+        <li><a href="<?php print base_url('index.php/superadmin/');?>"><i class="fa fa-book text-red"></i> <span>Masukan Nilai Ujian</span></a></li>
+        <li><a href="<?php print base_url('index.php/superadmin/siswa');?>"><i class="fa fa-mortar-board text-blue"></i> <span>Data Siswa</span></a></li>       
         <li class="header">LABELS</li>
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
       </ul>

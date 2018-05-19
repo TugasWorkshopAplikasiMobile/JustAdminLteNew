@@ -2,7 +2,9 @@
 <?php $this->load->view('adminlte2/global/02_header');?>
 <?php $this->load->view('adminlte2/global/03_headerbar');?>
 <?php $this->load->view('adminlte2/global/04_slidebar');?>
-<?php $this->load->view('adminlte2/global/05_content');?>
+<!-- bagian dinamis -->
+<?php $this->load->view('adminlte2/'.$active_controller.'/'.$active_function);?>
+<!-- tutup bagian dinamis -->
 <?php $this->load->view('adminlte2/global/06_footer');?>
 <?php $this->load->view('adminlte2/global/07_controlbar');?>
 <?php $this->load->view('adminlte2/global/08_javascript');?>
