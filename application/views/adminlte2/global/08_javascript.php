@@ -19,5 +19,47 @@
 <script src="<?php print base_url('assets/') ?>dist/js/pages/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php print base_url('assets/') ?>dist/js/demo.js"></script>
+
+	<script>
+    $("document").ready(function(){
+        var base_url="<?php echo base_url(); ?>";
+        var x = document.getElementById("myAudio");
+
+        function enableAutoplay() { 
+            x.autoplay = true;
+            x.load();
+        }
+        function load_unseen_notification(view = ''){
+            $.ajax({
+                url:base_url+"index.php/notifcontroler/peringatan",
+                method:"POST",
+                data:{baca:view},
+                dataType:"json",
+                success:function(data){
+                    $('.data_notifikasi').html(data.peringatan);
+                    if(data.unseen_notification > 0){
+                        $('#jml_notifikasi').html(data.unseen_peringatan);
+                        $('.popupnotifikasi').html(data.notificationping);
+                        $.ajax({
+                            url:base_url+"index.php/notifcontroler/peringatan",
+                            method:"POST",
+                            data:{popup:view},
+                            dataType:"json",
+                        });  
+                    }
+                    if (data.jmlpopup > 0) {
+                        enableAutoplay();
+                    }
+                }
+            });
+        }
+     
+        load_unseen_notification("");
+         
+        setInterval(function(){ 
+            load_unseen_notification(""); 
+        }, 7000);
+    });
+    </script>
 </body>
 </html>
