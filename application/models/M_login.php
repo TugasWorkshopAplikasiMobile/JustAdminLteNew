@@ -9,5 +9,6 @@ class M_login extends CI_Model{
        $query =  $this->db->get('admin');
        return $query->num_rows();
    }
+   
  }
  ?>

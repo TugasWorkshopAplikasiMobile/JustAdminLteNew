@@ -9,6 +9,7 @@ class Login extends CI_Controller {
 		redirect(base_url('superadmin/dashboard'));
 	}
 
+
 	public function index()
 	{
 		$this->load->view('/adminlte2/login');

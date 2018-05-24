@@ -10,7 +10,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="d-flex p-2 card bg-light rounded" style="margin: 50px 0 24px 0;">
 <div class="container-fluid">
   <h1 style="text-align: center;">Login</h1>
