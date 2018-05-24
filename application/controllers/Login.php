@@ -6,7 +6,10 @@ class Login extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
   	$this->load->model('m_login');
-		redirect(base_url('superadmin/dashboard'));
+		// redirect(base_url('superadmin/dashboard'));
+		// if(!$this->session->userdata('nama')){
+		// 	redirect(base_url("login"));
+		// }
 	}
 
 
@@ -17,7 +20,6 @@ class Login extends CI_Controller {
 
 public function login_action(){
     $cek = $this->m_login->login($this->input->post('username'), ($this->input->post('password')));
-
     if($cek > 0){
       $data_session = array(
         'nama'=>$user,
@@ -30,5 +32,9 @@ public function login_action(){
     }
 	}
 
+	function logout(){
+		$this->session->sess_destroy();
+		redirect('login');
+	}
 
 }
