@@ -23,7 +23,7 @@ public function login_action(){
     if($cek > 0){
       $data_session = array(
         'nama'=>$user,
-        'status'=> "login"
+        'status'=> $this->input->post('username')
       );
       $this->session->set_userdata($data_session);
       redirect(base_url('dashboard'));

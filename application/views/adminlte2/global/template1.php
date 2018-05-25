@@ -1,4 +1,4 @@
-<!-- Menu Pusat -->
+<!-- Menu SD -->
 
 <?php $this->load->view('adminlte2/global/01_head');?>
 <?php $this->load->view('adminlte2/global/02_header');?>
