@@ -26,7 +26,7 @@ public function login_action(){
         'status'=> "login"
       );
       $this->session->set_userdata($data_session);
-      redirect(base_url('superadmin/dashboard'));
+      redirect(base_url('dashboard'));
     }else{
       echo "Username dan password salah.";
     }
