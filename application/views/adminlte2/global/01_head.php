@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="<?php print base_url('assets/') ?>bower_components/Ionicons/css/ionicons.min.css">
   <!-- jvectormap -->
   <link rel="stylesheet" href="<?php print base_url('assets/') ?>bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Theme style -->  
+  <!-- Theme style -->
   <link rel="stylesheet" href="<?php print base_url('assets/') ?>dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
@@ -25,5 +25,5 @@
         href="<?php print base_url('assets/') ?>https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light sidebar-mini">
 <div class="wrapper">
