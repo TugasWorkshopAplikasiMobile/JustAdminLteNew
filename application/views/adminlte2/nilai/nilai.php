@@ -3,9 +3,11 @@
 <head>
 	<title>NILAI SISWA</title>
 </head>
+
 <body>
 
-	<div id="">
+	<div id="container">
+		<h1>Silakan isi data nilai di bawah ini !!!</h1>
 		<form action="" method="POST">
 			<input type="text" name="Matematika" placeholder="Nilai Matematika">
 			<input type="text" name="Bahasa Inggris" placeholder="Nilai Bahasa Inggris">
@@ -14,6 +16,8 @@
 			<input type="submit" name="Simpan" value="Simpan Data">
 		</form>
 	</div>
+
+
 <a href="http://localhost/kuliah/AdminCI/index.php/superadmin/profile">Back</a>
 </body>
 </html>
