@@ -11,8 +11,8 @@ class Nilai extends CI_Controller {
 	public function insert()
 	{
 		$data = array('Matematika'=> $this->input->POST('Matematika',true),
-						'BahasaInggris'=> $this->input->POST('BahasaInggris',true)
-						 'IPA'=> $this->input->POST('IPA',true)
+						'BahasaInggris'=> $this->input->POST('BahasaInggris',true),
+						 'IPA'=> $this->input->POST('IPA',true),
 							'Psikotest'=> $this->input->POST('Psikotest',true));
 		$insert = $this->m_nilai->insert('nilai_test',$data);
 		if ($insert>0) {
