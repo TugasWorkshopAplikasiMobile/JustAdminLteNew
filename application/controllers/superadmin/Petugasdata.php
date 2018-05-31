@@ -3,9 +3,10 @@
 class Petugasdata extends CI_Controller {
 
 
-		public function index()
-		{
-			$this->load->view('adminlte2/profile/petugas');
-				
+		public function index(){
+		$this->load->view('adminlte2/profile/petugas');
+	}
+		public function insertptg($data){
+		$data;
 	}
 }
