@@ -85,7 +85,7 @@
               <input type="text" name="password_admin" placeholder="Masukan Password">
             </div>
             <div class="form-group">
-              <input type="button" name="Batal" value="Batal">
+              <input type="button" name="Batal" value="Batal" data-dismiss="modal">
               <input type="button" name="Simpan" value="Simpan">
             </div>
           </form>
