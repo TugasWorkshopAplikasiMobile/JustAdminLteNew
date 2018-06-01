@@ -15,7 +15,7 @@
               <span class="label label-success">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
+              <li class="header">You messages</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -28,7 +28,7 @@
                         Support Team
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+
                     </a>
                   </li>
                   <!-- end message -->
@@ -41,7 +41,7 @@
                         Reviewers
                         <small><i class="fa fa-clock-o"></i> 2 days</small>
                       </h4>
-                      <p>Why not buy a new awesome theme?</p>
+                  
                     </a>
                   </li>
                 </ul>
@@ -54,13 +54,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php print base_url(); ?>" class="user-image" alt="User Image">
+              <img src="<?php print base_url(); ?>" class="user-image" alt="">
               <span class="hidden-xs">MasToper</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php print base_url(); ?>" class="img-circle" alt="User Image">
+                <img src="<?php print base_url(); ?>" class="img-circle" alt="">
 
                 <p>
                   MasJon
