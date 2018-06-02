@@ -44,6 +44,7 @@ class Petugasdata extends CI_Controller {
             $this->model->username_admin = $_POST['username_admin'];
             $this->model->password_admin = $_POST['password_admin'];
             $this->model->petugasupdate();
+            
             redirect('Petugasdata');
         }
 	}
