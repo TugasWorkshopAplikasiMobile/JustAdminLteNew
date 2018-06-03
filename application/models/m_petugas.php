@@ -19,7 +19,7 @@ class M_petugas extends CI_Model{
     }
 
   public function petugasinsert() {
-  		$sql = sprintf("INSERT INTO admin VALUES('id','nama','kelamin','tlpon','stats,'username','pass')",
+  		$sql = sprintf("INSERT INTO admin VALUES('id_admin','nama_admin','jenis_kelamin','no_telp','status,'username_admin','password_admin')",
   			$this->id_admin,
   			$this->nama_admin,
   			$this->jenis_kelamin,
@@ -30,7 +30,7 @@ class M_petugas extends CI_Model{
   		$this->db->query($sql);
    }
     public function petugasupdate() {
-  		$sql = sprintf("UPDATE admin SET nama_admin='nama',jenis_kelamin='kelamin',no_telp='tlpon',status='stats',username_admin='username',password_admin='pass', WHERE id_admin='id'",
+  		$sql = sprintf("UPDATE admin SET nama_admin='nama_admin',jenis_kelamin='jenis_kelamin',no_telp='no_telp',status='status',username_admin='username_admin',password_admin='password_admin', WHERE id_admin='id_admin'",
   			$this->id_admin,
   			$this->nama_admin,
   			$this->jenis_kelamin,
@@ -41,7 +41,7 @@ class M_petugas extends CI_Model{
   		$this->db->query($sql);
    }
     public function petugasdelete() {
-  		$sql = sprintf("DELETE FROM admin WHERE id_admin='id'",$this->id_admin);
+  		$sql = sprintf("DELETE FROM admin WHERE id_admin='id_admin'",$this->id_admin);
   		$this->db->query($sql);
    }
     public function read() {

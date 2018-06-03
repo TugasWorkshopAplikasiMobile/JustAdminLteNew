@@ -40,7 +40,7 @@
         <data class="modal-body">
           <form action="create" method="POST" accept-charset="utf-8">
             <div class="form-group">
-              <?php echo $model->labels['id_admin']; ?>
+              <?php echo $model->labels['id_admin'];?>
               <label>ID Petugas</label>
               <input type="text" name="id_admin" placeholder="Masukan ID Petugas">
             </div>
