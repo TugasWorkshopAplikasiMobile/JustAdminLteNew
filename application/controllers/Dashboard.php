@@ -16,3 +16,4 @@ class Dashboard extends CI_Controller {
 		$this->load->view('adminlte2/global/template',$data);
 	}
 }
+//asd
