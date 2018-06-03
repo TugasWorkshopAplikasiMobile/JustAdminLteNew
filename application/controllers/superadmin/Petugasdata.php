@@ -15,6 +15,8 @@ class Petugasdata extends CI_Controller {
 		$this->load->helper('url');//sbg redirecrt
 	}
 		public function index(){
+		$data=['active_controller'=>'profile','active_function'=>'petugas','rows'=>$rows];
+		$this->load->view('adminlte2/global/template',$data);
 		$this->read();
 	}
 		public function create(){
@@ -33,7 +35,7 @@ class Petugasdata extends CI_Controller {
         public function read(){
         	$rows = $this ->model->read();
         	//$query = $this->db->query("SELECT * FROM admin ORDER BY id_admin");
-        	$this->load->view('adminlte2/profile/petugas', ['rows'=>$rows]);
+        	// $this->load->view('adminlte2/profile/petugas', ['rows'=>$rows]);
         }
          public function update($id){
 			 if(isset($_POST['btnSubmit'])) {
@@ -51,6 +53,7 @@ class Petugasdata extends CI_Controller {
             $this->model->id_admin = $row->id_admin;
             $this->model->nama_admin = $row->nama_admin;
             $this->model->no_telp = $row->no_telp;
+
             $this->model->status = $row->status;
             $this->model->username_admin = $row->username_admin;
             $this->model->password_admin = $row->password_admin;

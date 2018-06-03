@@ -14,7 +14,7 @@ class M_petugas extends CI_Model{
 
     public function __construct(){
     	parent:: __construct();
-    	$this->labels = $this-> _attributeLabels();
+    	$this->labels = $this->_attributeLabels();
     	$this->load->database();
     }
 
