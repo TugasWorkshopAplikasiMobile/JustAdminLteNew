@@ -11,8 +11,8 @@
 
 
 </head>
-
 <body>
+
 <div class="container"></div>
 <h1 align="center">Input Data Nilai Siswa</h1>
 <!-- <a style="margin-bottom: 10px"; href="" class="btn-primary" data-toggle="modal" data-target="#AddModal"></a>
@@ -48,9 +48,13 @@
             <h1>Tambah Data</h1>
           </div>
         </div>
+
+<!-- php here kikun -->
+
         <data class="modal-body">
-          <form action="" method="POST" accept-charset="utf-8">
+          <form action="create" method="POST" accept-charset="utf-8">
             <div class="form-group">
+              <?php echo $model->labels['id_admin']; ?>
               <label>ID Petugas</label>
               <input type="text" name="id_admin" placeholder="Masukan ID Petugas">
             </div>
@@ -95,18 +99,7 @@
       </div>
     </div>
   </div>
-<!--   <div id="container">
-    <h1>Silakan isi data nilai di bawah ini !!!</h1>
-    <form action="<?php echo base_url('superadmin/Petugasdata/insertptg') ?>" method="POST">
-      <input type="text" name="id_admin" placeholder="ID Petugas">
-      <input type="text" name="nama_admin" placeholder="Nama Petugas">
-      <input type="dropdown" name="jenis_kelamin" placeholder="Jenis Kelamin"> 
-      <input type="text" name="status" placeholder="Jabatan"> 
-      <input type="text" name="username_admin" placeholder="Username"> 
-      <input type="text" name="password_admin" placeholder="Password"> 
-      <input type="submit" name="Simpan" value="Simpan Data">
-    </form>
-  </div> -->
+  
 <a href="http://localhost/kuliah/AdminCI/index.php/superadmin/dashboard">Back</a>
 </body>
 </html>

@@ -44,8 +44,23 @@ class Petugasdata extends CI_Controller {
             $this->model->username_admin = $_POST['username_admin'];
             $this->model->password_admin = $_POST['password_admin'];
             $this->model->petugasupdate();
-            
             redirect('Petugasdata');
+        }else{
+        	$query = $this->db->query("SELECT * FROM admin WHERE id_admin ='$id'");
+            $row = $query->row();
+            $this->model->id_admin = $row->id_admin;
+            $this->model->nama_admin = $row->nama_admin;
+            $this->model->no_telp = $row->no_telp;
+            $this->model->status = $row->status;
+            $this->model->username_admin = $row->username_admin;
+            $this->model->password_admin = $row->password_admin;
+            $this->load->view('adminlte2/profile/petugas', ['model'=>$this->model]);
         }
 	}
+	public function delete($id) {
+        $this->model->id_admin = $id;
+ 
+        $this->model->delete();
+        redirect('Petugasdata');
+    }
 }
