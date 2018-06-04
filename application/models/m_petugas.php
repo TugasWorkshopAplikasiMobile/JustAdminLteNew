@@ -51,13 +51,13 @@ class M_petugas extends CI_Model{
     }
      private function _attributeLabels() {
         return [
-            'id_admin'=>'id_admin: ',
-            'nama_admin'=>'nama_admin: ',
-            'jenis_kelamin'=>'jenis_kelamin:',
-            'no_telp'=>'no_telp: ',
-            'status'=>'status: ',
-            'username_admin'=>'username_admin: ',
-            'password_admin'=>'password_admin: '
+            'id_admin'=>'ID Petugas: ',
+            'nama_admin'=>'Nama Petugas: ',
+            'jenis_kelamin'=>'Jenis Kelamin:',
+            'no_telp'=>'Nomor Telphone: ',
+            'status'=>'Jabatan: ',
+            'username_admin'=>'Username: ',
+            'password_admin'=>'Password: '
         ];
     }
  }

@@ -40,16 +40,18 @@
         <data class="modal-body">
           <form action="create" method="POST" accept-charset="utf-8">
             <div class="form-group">
-              <?php echo $model->labels['id_admin'];?>
-              <label>ID Petugas</label>
+              <?php echo $this->model->labels['id_admin'];?>
+              <!-- <label>ID Petugas</label> -->
               <input type="text" name="id_admin" placeholder="Masukan ID Petugas">
             </div>
             <div class="form-group">
-              <label>Nama Petugas</label>
+              <?php echo $this->model->labels['nama_admin'];?>
+              <!-- <label>Nama Petugas</label> -->
               <input type="text" name="nama_admin" placeholder="Masukan Nama Petugas">
             </div>
               <div class="form-group">
-              <label>Jenis Kelamin</label>
+                <?php echo $this->model->labels['jenis_kelamin'];?>
+              <!-- <label>Jenis Kelamin</label> -->
               <select name="jenis_kelamin">
                 <option value="-">-</option>
                 <option value="Laki - Laki">Laki - Laki</option>
@@ -57,7 +59,8 @@
               </select>
             </div>
               <div class="form-group">
-              <label>Jabatan</label>
+                <?php echo $this->model->labels['status'];?>
+              <!-- <label>Jabatan</label> -->
               <select name="status">
                 <option value="-">-</option>
                 <option value="Direktur">Direktur</option>
@@ -69,16 +72,18 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Username</label>
+              <?php echo $this->model->labels['username_admin'];?>
+              <!-- <label>Username</label> -->
               <input type="text" name="username_admin" placeholder="Masukan Username">
             </div>
             <div class="form-group">
-              <label>Password</label>
+              <?php echo $this->model->labels['password_admin'];?>
+              <!-- <label>Password</label> -->
               <input type="text" name="password_admin" placeholder="Masukan Password">
             </div>
             <div class="form-group">
-              <input type="button" name="Batal" value="Batal" data-dismiss="modal">
-              <input type="button" name="Simpan" value="Simpan">
+              <input type="submit" name="btnSubmit" value="Simpan"/>
+              <input type="button" value="Batal" onclick="javascript:history.go(-1);"/>
             </div>
           </form>
         </data>

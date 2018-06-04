@@ -2,10 +2,10 @@
 
 class Petugasdata extends CI_Controller {
 
-	public $model = NULL;
+	public $model = 'NULL';
 
-	public function __construct()
-	{
+	public function __construct(){
+
 		parent::__construct();
 			//Memuat Model
 		$this->load->model('m_petugas');
@@ -15,11 +15,12 @@ class Petugasdata extends CI_Controller {
 		$this->load->helper('url');//sbg redirecrt
 	}
 		public function index(){
+			$rows = $this ->model->read();
 		$data=['active_controller'=>'profile','active_function'=>'petugas','rows'=>$rows];
 		$this->load->view('adminlte2/global/template',$data);
 		$this->read();
 	}
-		public function create(){
+		public function petugasinsert(){
 			 if(isset($_POST['btnSubmit'])) {
             $this->model->id_admin = $_POST['id_admin'];
             $this->model->nama_admin = $_POST['nama_admin'];
@@ -28,7 +29,7 @@ class Petugasdata extends CI_Controller {
             $this->model->username_admin = $_POST['username_admin'];
             $this->model->password_admin = $_POST['password_admin'];
             $this->model->petugasinsert();
-            redirect('Petugasdata');
+            redirect('superadmin/Petugasdata');
         }
         	$this->load->view('adminlte2/profile/petugas', ['model'=>$this->model]);
         }
@@ -37,7 +38,7 @@ class Petugasdata extends CI_Controller {
         	//$query = $this->db->query("SELECT * FROM admin ORDER BY id_admin");
         	// $this->load->view('adminlte2/profile/petugas', ['rows'=>$rows]);
         }
-         public function update($id){
+         public function petugasupdate($id){
 			 if(isset($_POST['btnSubmit'])) {
             $this->model->id_admin = $_POST['id_admin'];
             $this->model->nama_admin = $_POST['nama_admin'];
@@ -46,23 +47,21 @@ class Petugasdata extends CI_Controller {
             $this->model->username_admin = $_POST['username_admin'];
             $this->model->password_admin = $_POST['password_admin'];
             $this->model->petugasupdate();
-            redirect('Petugasdata');
+            redirect('superadmin/Petugasdata');
         }else{
         	$query = $this->db->query("SELECT * FROM admin WHERE id_admin ='$id'");
             $row = $query->row();
             $this->model->id_admin = $row->id_admin;
             $this->model->nama_admin = $row->nama_admin;
             $this->model->no_telp = $row->no_telp;
-
             $this->model->status = $row->status;
             $this->model->username_admin = $row->username_admin;
             $this->model->password_admin = $row->password_admin;
             $this->load->view('adminlte2/profile/petugas', ['model'=>$this->model]);
         }
 	}
-	public function delete($id) {
+	public function petugasdelete($id) {
         $this->model->id_admin = $id;
- 
         $this->model->delete();
         redirect('Petugasdata');
     }
